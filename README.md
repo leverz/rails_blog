@@ -15,3 +15,9 @@ brew install ruby
 ```shell
 rails new blog
 ```
+
+使用如下命令启动服务：
+
+```shell
+rails server
+```
