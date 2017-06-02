@@ -9,3 +9,9 @@ brew install ruby
 ```
 
 可以使用RVM来进行ruby环境的版本管理。
+
+使用rails自带的脚手架搭建项目
+
+```shell
+rails new blog
+```
