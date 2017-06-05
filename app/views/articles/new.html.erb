@@ -1,6 +1,18 @@
 <h1>new Article</h1>
 
 <%= form_for :article, url: articles_path do |f| %>
+	<% if @article.errors.any?  %>
+		<div id="error">
+			<h2>
+				<%= pluralize(@article.errors.count, "error") %>
+			</h2>
+			<ul>
+				<% @article.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
 	<p>
 		<%= f.label :title %><br>
 		<%= f.text_field :title%>
